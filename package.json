@@ -15,10 +15,30 @@
     "test": "tsdx test",
     "lint": "tsdx lint"
   },
+  "devDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
+    "@types/jest": "24.0.23",
+    "husky": "3.1.0",
+    "tsdx": "0.11.0",
+    "tslib": "1.10.0",
+    "typescript": "3.7.3"
+  },
   "peerDependencies": {},
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "tsdx lint"
+    }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^~/(.*)": "<rootDir>/src/$1"
     }
   },
   "prettier": {
@@ -26,17 +46,5 @@
     "semi": false,
     "singleQuote": true,
     "trailingComma": "all"
-  },
-  "devDependencies": {
-    "@types/jest": "^24.0.23",
-    "husky": "^3.1.0",
-    "tsdx": "^0.11.0",
-    "tslib": "^1.10.0",
-    "typescript": "^3.7.3"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^~/(.*)": "<rootDir>/src/$1"
-    }
   }
 }
