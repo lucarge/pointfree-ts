@@ -1,24 +1,11 @@
 {
-  "name": "pointfree-ts",
-  "version": "0.1.0",
-  "license": "MIT",
   "author": "lucarge",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lucarge/pointfree-ts"
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
-  "main": "dist/index.js",
-  "module": "dist/pointfree-ts.esm.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "lint": "tsdx lint src"
-  },
+  "description": "A crazy attempt to make the JavaScript standard library pointfree",
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
@@ -28,12 +15,9 @@
     "tslib": "1.10.0",
     "typescript": "3.7.3"
   },
-  "peerDependencies": {},
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
+  "files": [
+    "dist"
+  ],
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
@@ -45,10 +29,27 @@
       "^~/(.*)": "<rootDir>/src/$1"
     }
   },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/pointfree-ts.esm.js",
+  "name": "pointfree-ts",
+  "peerDependencies": {},
   "prettier": {
     "printWidth": 120,
     "semi": false,
     "singleQuote": true,
     "trailingComma": "all"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucarge/pointfree-ts"
+  },
+  "scripts": {
+    "build": "tsdx build",
+    "lint": "tsdx lint src",
+    "start": "tsdx watch",
+    "test": "tsdx test"
+  },
+  "typings": "dist/index.d.ts",
+  "version": "0.1.0"
 }
