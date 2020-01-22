@@ -1,12 +1,12 @@
 # 0.2.0 (2020-01-22)
 
 
-### Bug Fixes
+### 🐛 Bug Fixes
 
 * eslint warning about missing input ([cdf61c3](https://github.com/lucarge/pointfree-ts/commit/cdf61c37bb7fde5b7de6c76b09cba6625ee79fc8))
 
 
-### Features
+### 🏗 Features
 
 * add array.filter ([fe23be6](https://github.com/lucarge/pointfree-ts/commit/fe23be69d58cf8afd76feeae2fbadc743b351aac))
 * add missing test for array.from ([17ac178](https://github.com/lucarge/pointfree-ts/commit/17ac17804583167e55baaa0fff84995b9bdb3976))

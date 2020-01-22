@@ -1,6 +1,8 @@
 name: continuous delivery
 
-on: release
+on:
+  release:
+    types: [published]
 
 jobs:
   release:
