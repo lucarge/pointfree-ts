@@ -52,6 +52,7 @@
     "start": "tsdx watch",
     "test": "tsdx test"
   },
+  "sideEffects": false,
   "typings": "dist/index.d.ts",
   "version": "0.2.0"
 }
